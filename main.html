@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <svg id="flower-frame" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700">
+
+            <!-- ===================== VISIBLE ARTWORK ===================== -->
+            <!-- These use shapes other than <path> (ellipse/polygon/circle),
+                 so the "path"-only hide rules for BaseGroup/LeafGroup don't
+                 touch them. This is where your real artwork paths should
+                 eventually go if you want them visible. -->
+
+            <!-- Pot / base (visible: uses <ellipse>, not <path>) -->
+            <g id="BaseGroup">
+                <ellipse cx="250" cy="640" rx="90" ry="24" fill="#7a4a2b"/>
+                <polygon points="180,560 320,560 300,640 200,640" fill="#8a5a35"/>
+                <ellipse cx="250" cy="560" rx="70" ry="16" fill="#9c6a40"/>
+                <!-- alt/duplicate base outline kept as <path>, hidden by CSS -->
+                <path d="M180,560 L320,560 L300,640 L200,640 Z" fill="none" stroke="#4a2f1a" stroke-width="3"/>
+            </g>
+
+            <!-- Stem -->
+            <g id="StemGroup">
+                <rect x="242" y="330" width="16" height="230" fill="#3f8f3f"/>
+            </g>
+
+            <!-- Leaves (visible: uses <polygon>, not <path>) -->
+            <g id="LeafGroup">
+                <polygon points="250,470 150,430 190,510" fill="#4caf50"/>
+                <polygon points="250,510 350,480 320,550" fill="#4caf50"/>
+                <!-- alt/duplicate leaf vein detail kept as <path>, hidden by CSS -->
+                <path d="M250,470 L190,470" stroke="#2e7d32" stroke-width="2" fill="none"/>
+                <path d="M250,510 L320,510" stroke="#2e7d32" stroke-width="2" fill="none"/>
+            </g>
+
+            <!-- Main flower (visible - orange/yellow) -->
+            <g id="MainFlowerGroup">
+                <g id="Petals">
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffb347"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffb347" transform="rotate(45 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffb347" transform="rotate(90 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffb347" transform="rotate(135 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffcc70" transform="rotate(22.5 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffcc70" transform="rotate(67.5 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffcc70" transform="rotate(112.5 250 230)"/>
+                    <ellipse cx="250" cy="230" rx="40" ry="70" fill="#ffcc70" transform="rotate(157.5 250 230)"/>
+                </g>
+                <circle cx="250" cy="230" r="34" fill="#e8590c"/>
+                <!-- decorative dots on the flower center, hidden by CSS -->
+                <g id="Dots">
+                    <circle cx="238" cy="222" r="3" fill="#7a2b00"/>
+                    <circle cx="262" cy="222" r="3" fill="#7a2b00"/>
+                    <circle cx="250" cy="238" r="3" fill="#7a2b00"/>
+                    <circle cx="235" cy="240" r="3" fill="#7a2b00"/>
+                    <circle cx="265" cy="240" r="3" fill="#7a2b00"/>
+                </g>
+            </g>
+
+            <!-- Alt pink color variant of the flower, hidden by CSS -->
+            <g id="PinkFlowerGroup">
+                <ellipse cx="250" cy="230" rx="40" ry="70" fill="#f48fb1"/>
+                <ellipse cx="250" cy="230" rx="40" ry="70" fill="#f48fb1" transform="rotate(45 250 230)"/>
+                <ellipse cx="250" cy="230" rx="40" ry="70" fill="#f48fb1" transform="rotate(90 250 230)"/>
+                <ellipse cx="250" cy="230" rx="40" ry="70" fill="#f48fb1" transform="rotate(135 250 230)"/>
+                <circle cx="250" cy="230" r="34" fill="#ad1457"/>
+            </g>
+
+            <!-- Buds: outer bud visible, inner "closed bud" state hidden by CSS -->
+            <g id="BudGroup">
+                <ellipse cx="330" cy="410" rx="14" ry="22" fill="#6fbf6f"/>
+                <g id="BudGroup1">
+                    <g id="Bud">
+                        <ellipse cx="330" cy="410" rx="8" ry="14" fill="#ffb347"/>
+                    </g>
+                </g>
+            </g>
+
+            <!-- Decorative swirl flourish, hidden by CSS -->
+            <g id="Flourish">
+                <path d="M120,300 C60,260 60,180 130,160 C90,220 100,270 140,300 Z" fill="#a3d9a5"/>
+                <path d="M380,300 C440,260 440,180 370,160 C410,220 400,270 360,300 Z" fill="#a3d9a5"/>
+            </g>
+
+            <!-- Signature / footer credit, hidden by CSS -->
+            <g id="Footer_group_1">
+                <text x="250" y="690" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">
+                    Flower artwork placeholder
+                </text>
+            </g>
+
+        </svg>
+    </div>
+</body>
+</html>

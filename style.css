@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background: #125283;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+svg#flower-frame {
+    display: block;
+    height: 90vh;
+    width: 100%;
+}
+
+#Footer_group_1,
+[id^="PinkFlowerGroup"],
+[id^="BaseGroup"] path,
+[id^="LeafGroup"] path,
+g[id^="BudGroup"] g[id^="Bud"],
+[id^="Dots"],
+[id^="Flourish"] {
+    visibility: hidden;
+}
